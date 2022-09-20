@@ -1,0 +1,28 @@
+GET http://localhost:8080/admin/auth/captchaImage
+
+<> 2022-09-20T153559.200.json
+
+###
+
+GET http://localhost:8080/admin/auth/captchaImage
+
+<> 2022-09-20T141402.200.txt
+
+###
+
+GET http://localhost/admin/auth/captchaImage
+
+###
+
+GET http://localhost/admin/auth/captchaImage
+
+###
+
+GET http://localhost/admin/auth/captchaImage
+
+###
+
+GET http://localhost/admin/auth/captchaImage
+
+###
+

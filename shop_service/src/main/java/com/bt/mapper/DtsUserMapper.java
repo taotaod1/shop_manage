@@ -2,6 +2,9 @@ package com.bt.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.bt.pojo.DtsUser;
+import com.bt.vo.DayStatis;
+
+import java.util.List;
 
 /**
  * <p>
@@ -12,5 +15,5 @@ import com.bt.pojo.DtsUser;
  * @since 2021-05-12
  */
 public interface DtsUserMapper extends BaseMapper<DtsUser> {
-
+    List<DayStatis> selectByDayStatis(int statisDaysRang);
 }

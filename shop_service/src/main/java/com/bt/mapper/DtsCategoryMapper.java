@@ -2,6 +2,9 @@ package com.bt.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.bt.pojo.DtsCategory;
+import com.bt.vo.CategorySellAmts;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.bt.pojo.DtsCategory;
  */
 public interface DtsCategoryMapper extends BaseMapper<DtsCategory> {
 
+    List<CategorySellAmts> findCategorySellAmts();
 }

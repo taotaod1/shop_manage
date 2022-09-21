@@ -1,22 +1,26 @@
 package com.bt.controller;
 
+import com.alibaba.druid.util.StringUtils;
 import com.bt.captcha.CaptchaCodeManager;
-import com.bt.util.Base64;
-import com.bt.util.ResponseUtil;
-import com.bt.util.UUID;
-import com.bt.util.VerifyCodeUtils;
+import com.bt.pojo.DtsAdmin;
+import com.bt.service.DtsPermissionService;
+import com.bt.service.DtsRoleService;
+import com.bt.shiro.AdminAuthorizingRealm;
+import com.bt.util.*;
 import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
-import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.*;
+import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.cache.Cache;
+import org.apache.shiro.subject.Subject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * 后端管理--认证管理
@@ -32,6 +36,11 @@ import java.util.Map;
 @RequestMapping("/admin/auth")
 @CrossOrigin
 public class AdminAuthController {
+    @Autowired
+    private DtsRoleService dtsRoleServiceImpl;
+    @Autowired
+    private DtsPermissionService dtsPermissionServiceImpl;
+
 //    获取验证码
     @GetMapping("/captchaImage")
     public Object captchaImage() throws IOException {
@@ -54,5 +63,96 @@ public class AdminAuthController {
         data.put("img",encode);
         data.put("uuid",uuid);
         return ResponseUtil.ok(data);
+    }
+    /*
+    - 登录请求地址 : http://localhost:8083/admin/auth/login
+    - POST请求
+    - 上行数据:
+{
+	"code": "66e8",
+	"password": "123456",
+	"username": "qianfeng",
+	"uuid": "cab317c6-1bf1-436d-96ac-fda9f8d37dde"
+}
+- 下行数据 :
+{
+    "errno":0,
+ 	"data":"568f6dd8-97c7-450d-a00b-0a01c3b930c7", //是当前用户Session的ID
+ 	"errmsg":"成功"
+}
+方案一： AdminDTO
+方案二：直接接受JSON串
+            JacksonUtils 获取四个属性
+    * */
+    @PostMapping("/login")
+    public Object login(@RequestBody String body){
+//      1 接受页面传递过来的参数
+        String code = JacksonUtil.parseString(body, "code");
+        String password = JacksonUtil.parseString(body, "password");
+        String username = JacksonUtil.parseString(body, "username");
+        String uuid = JacksonUtil.parseString(body, "uuid");
+        if(StringUtils.isEmpty(code)){
+            return AdminResponseUtil.fail(807,"验证码不能为空");
+        }
+        if(StringUtils.isEmpty(password)){
+            return AdminResponseUtil.fail(808,"密码不能为空");
+        }
+        if(StringUtils.isEmpty(username)){
+            return AdminResponseUtil.fail(809,"用户名不能为空");
+        }
+        if(StringUtils.isEmpty(uuid)){
+            return AdminResponseUtil.fail(810,"uuid不能为空");
+        }
+//        2 校验验证码
+        String cachedCaptcha = CaptchaCodeManager.getCachedCaptcha(uuid);
+        if(StringUtils.isEmpty(cachedCaptcha)){
+            return AdminResponseUtil.fail(AdminResponseCode.AUTH_CAPTCHA_EXPIRED);
+        }
+//        3 校验验证码是否正确
+//        if(!cachedCaptcha.equalsIgnoreCase(code)){
+//            return AdminResponseUtil.fail(AdminResponseCode.AUTH_CAPTCHA_ERROR);
+//        }
+//        3 用户名和密码校验
+        Subject subject = SecurityUtils.getSubject();
+//        密码加密 明文和密文可以直接比较
+        UsernamePasswordToken usernamePasswordToken=new UsernamePasswordToken(username,password);
+        try {
+            subject.login(usernamePasswordToken);
+        } catch (UnknownAccountException e) {
+            return AdminResponseUtil.fail(AdminResponseCode.ADMIN_INVALID_AUTH);
+        }catch (IncorrectCredentialsException e) {
+            return AdminResponseUtil.fail(AdminResponseCode.ADMIN_INVALID_ACCOUNT_OR_PASSWORD);
+        }catch (LockedAccountException e) {
+            return AdminResponseUtil.fail(AdminResponseCode.ADMIN_LOCK_ACCOUNT);
+        }
+        return AdminResponseUtil.ok(subject.getSession().getId());
+    }
+
+    /**
+    * @Author: wbt
+    * @Description: - 登录后获取用户名, 角色, 权限详细信息地址 : http://localhost:8083/admin/auth/info
+    * @DateTime: 17:10 2022/9/20
+    * @Params:
+    * @Return
+    */
+    @GetMapping("/info")
+    public Object info(){
+        Subject subject = SecurityUtils.getSubject();
+        DtsAdmin admin = (DtsAdmin) subject.getPrincipal();
+        Integer[] roleIds = admin.getRoleIds();
+        Set<String> rolenames=dtsRoleServiceImpl.findRoleNameByIds(roleIds);
+        Set<String> permission = dtsPermissionServiceImpl.findPermissionByIds(roleIds);
+        Map data=new HashMap<>();
+        data.put("roles",new String[]{"超级管理员"});
+        data.put("name",admin.getUsername());
+        data.put("perms",new String[]{"*"});
+        data.put("avatar",admin.getAvatar());
+        return AdminResponseUtil.ok(data);
+    }
+    @PostMapping("/logout")
+    public Object logout(){
+        Subject subject = SecurityUtils.getSubject();
+        subject.logout();
+        return AdminResponseUtil.ok();
     }
 }

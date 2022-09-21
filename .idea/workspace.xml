@@ -9,7 +9,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfeb94a7-f241-4183-8acb-f2a4c8105df7" name="变更" comment="提交忽略文件" />
+    <list default="true" id="dfeb94a7-f241-4183-8acb-f2a4c8105df7" name="变更" comment="提交忽略文件">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/shop_common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/shop_common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/vo/OrderAmtsVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/vo/OrderAmtsVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/vo/UserOrderCntVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/vo/UserOrderCntVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/target/classes/com/bt/vo/OrderAmtsVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/target/classes/com/bt/vo/OrderAmtsVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/target/classes/com/bt/vo/UserOrderCntVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/target/classes/com/bt/vo/UserOrderCntVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/shop_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/shop_service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsAddressMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsAddressMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsCategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsCategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsOrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsOrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/util/AdminResponseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/util/AdminResponseCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/resources/com/bt/mapper/DtsUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/resources/com/bt/mapper/DtsUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/target/classes/com/bt/mapper/DtsCategoryMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/target/classes/com/bt/mapper/DtsCategoryMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/target/classes/com/bt/mapper/DtsOrderMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/target/classes/com/bt/mapper/DtsOrderMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/target/classes/com/bt/mapper/DtsUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/target/classes/com/bt/mapper/DtsUserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/target/classes/com/bt/mapper/DtsUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/target/classes/com/bt/mapper/DtsUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/target/classes/com/bt/util/AdminResponseCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/target/classes/com/bt/util/AdminResponseCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_web/shop_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shop_web/shop_web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_web/src/main/java/com/bt/controller/AdminAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_web/src/main/java/com/bt/controller/AdminAuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_web/src/main/java/com/bt/shiro/AdminAuthorizingRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_web/src/main/java/com/bt/shiro/AdminAuthorizingRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_web/target/classes/com/bt/shiro/AdminAuthorizingRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop_web/target/classes/com/bt/shiro/AdminAuthorizingRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_web/target/shop_web-1.0-SNAPSHOT/WEB-INF/classes/com/bt/shiro/AdminAuthorizingRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop_web/target/shop_web-1.0-SNAPSHOT/WEB-INF/classes/com/bt/shiro/AdminAuthorizingRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_web/target/shop_web-1.0-SNAPSHOT/WEB-INF/lib/shop_common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/shop_web/target/shop_web-1.0-SNAPSHOT/WEB-INF/lib/shop_common-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_web/target/shop_web-1.0-SNAPSHOT/WEB-INF/lib/shop_service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/shop_web/target/shop_web-1.0-SNAPSHOT/WEB-INF/lib/shop_service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_web/target/shop_web-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop_web/target/shop_web-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +50,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
+        <option value="Mapper" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -29,6 +58,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="JRebelWorkspace">
     <option name="jrebelEnabledAutocompile" value="true" />
@@ -64,7 +101,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/shop_web/src/main/java/com/bt/shiro" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/shop_service/src/main/resources/com/bt/mapper" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -79,22 +116,33 @@
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.bt.service.impl" />
+      <recent name="com.bt.service" />
+      <recent name="com.bt.controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ideaIU-2021.3.2.win\1000phone-projects\shop_manage" />
       <recent name="E:\ideaIU-2021.3.2.win\1000phone-projects\shop_manage\shop_web\src\main\java\com\bt\shiro" />
       <recent name="E:\ideaIU-2021.3.2.win\1000phone-projects\shop_manage\shop_web\src\main\java\com\bt" />
       <recent name="E:\ideaIU-2021.3.2.win\1000phone-projects\shop_manage\shop_service\src\main\resources\com\bt\mapper" />
       <recent name="E:\ideaIU-2021.3.2.win\1000phone-projects\shop_manage\shop_service\src\main\java" />
-      <recent name="E:\ideaIU-2021.3.2.win\1000phone-projects\shop_manage\shop_common\src\main\java" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat 服务器.Tomcat 8.5.81">
-    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="运行单个请求">
-      <method v="2" />
-    </configuration>
     <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="运行单个请求">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests中的所有" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
+    <configuration name="generated-requests | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="4" requestIdentifier="#4" runType="运行单个请求">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="6" requestIdentifier="#6" runType="运行单个请求">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="7" requestIdentifier="#7" runType="运行单个请求">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #9" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="9" requestIdentifier="#9" runType="运行单个请求">
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 8.5.81" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.81" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -218,9 +266,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP 请求.generated-requests | #9" />
+        <item itemvalue="HTTP 请求.generated-requests | #7" />
+        <item itemvalue="HTTP 请求.generated-requests | #6" />
+        <item itemvalue="HTTP 请求.generated-requests | #4" />
         <item itemvalue="HTTP 请求.generated-requests | #3" />
-        <item itemvalue="HTTP 请求.generated-requests | #2" />
-        <item itemvalue="HTTP 请求.generated-requests中的所有" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +283,10 @@
       <option name="presentableId" value="Default" />
       <updated>1663639027109</updated>
       <workItem from="1663639028379" duration="7074000" />
-      <workItem from="1663652854208" duration="7135000" />
+      <workItem from="1663652854208" duration="12818000" />
+      <workItem from="1663671411321" duration="13549000" />
+      <workItem from="1663719759193" duration="25898000" />
+      <workItem from="1663765456095" duration="6242000" />
     </task>
     <task id="LOCAL-00001" summary="提交忽略文件">
       <created>1663642740716</created>
@@ -242,7 +295,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663642740716</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="第一次提交 搭建环境&amp;获取验证码">
+      <created>1663660638349</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663660638349</updated>
+    </task>
+    <task id="LOCAL-00003" summary="提交忽略文件">
+      <created>1663671811756</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663671811756</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +327,15 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="第一次提交 搭建环境&amp;获取验证码" />
     <MESSAGE value="提交忽略文件" />
     <option name="LAST_COMMIT_MESSAGE" value="提交忽略文件" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.aop.framework.JdkDynamicAopProxy" memberName="advised" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

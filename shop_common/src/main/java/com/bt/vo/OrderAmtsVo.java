@@ -14,7 +14,7 @@ public class OrderAmtsVo implements Serializable {
 	
 	private BigDecimal[] orderAmtData;//日订单金额
 
-	private int[] orderCntData;//日订单量
+	private Integer[] orderCntData;//日订单量
 
 
 	

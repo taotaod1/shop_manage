@@ -2,6 +2,9 @@ package com.bt.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.bt.pojo.DtsOrder;
+import com.bt.vo.DayStatis;
+
+import java.util.List;
 
 /**
  * <p>
@@ -14,6 +17,5 @@ import com.bt.pojo.DtsOrder;
 public interface DtsOrderMapper extends BaseMapper<DtsOrder> {
 
 
-
-
+    List<DayStatis> findDayStatis(int statisDaysRang);
 }

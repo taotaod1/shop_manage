@@ -16,10 +16,10 @@ public class UserOrderCntVo implements Serializable {
 	private String[] dayData;
 
 	//每日用户新增量
-	private int[] userCnt;
+	private Integer[] userCnt;
 
 	//每日订单量
-	private int[] orderCnt;
+	private Integer[] orderCnt;
 
 
 }

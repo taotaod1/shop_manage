@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bt.mapper.DtsAddressMapper">
+
+<select id="selectAddressVoByPage" resultType="com.bt.vo.AddressVo">
+    SELECT da.*,dr.`name` as province,dr2.`name` as city,dr3.`name` AS area
+    FROM dts_address da
+             INNER JOIN dts_region dr
+                        ON da.province_id=dr.id
+             INNER JOIN dts_region dr2
+                        ON da.city_id=dr2.id
+             INNER JOIN dts_region dr3
+                        ON da.area_id=dr3.id
+    <where>
+        <if test="userId!=null">
+            and da.user_id=#{userId}
+        </if>
+        <if test="name!=null">
+            and da.name like "%"#{name}"%"
+        </if>
+    </where>
+    <if test="sort!=null">
+        order by #{sort} ${order}
+    </if>
+    </select>
+</mapper>

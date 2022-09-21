@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bt.mapper.DtsOrderMapper">
+
+<select id="findDayStatis" resultType="com.bt.vo.DayStatis">
+    SELECT DATE_FORMAT(do.add_time,'%Y-%m-%d') as daystr, SUM(do.order_price) as amts,COUNT(1) as cnts
+    FROM dts_order do
+    WHERE do.add_time > DATE_ADD(NOW(),INTERVAL -#{statisDaysRang} DAY)
+    GROUP BY DATE_FORMAT(do.add_time,'%Y-%m-%d')
+    </select>
+</mapper>

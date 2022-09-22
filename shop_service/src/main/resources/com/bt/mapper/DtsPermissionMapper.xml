@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace = 所需实现的接口全限定名-->
+<mapper namespace="com.bt.mapper.DtsPermissionMapper" >
+    <!--id = 所需重写的接口抽象方法，resultType = 查询后所需返回的对象类型-->
+<insert id="insetBatch" >
+    INSERT INTO
+    dts_permission
+    <trim prefix="values"  suffixOverrides=",">
+        <foreach collection="permissionss" item="perm" >
+        (null,#{roleId},#{perm.permission},#{perm.addTime},#{perm.updateTime},#{perm.deleted}),
+        </foreach>
+    </trim>
+</insert>
+
+<delete id="deleteBatchByRoleIdAndPermission">
+    DELETE FROM  dts_permission
+    <where>
+        <if test="roleId!=null">
+           and role_id = #{roleId}
+        </if>
+        <if test="detDtsPermission!=null">
+           and permission in
+         <foreach collection="detDtsPermission" item="perm" open="(" close=")" separator="," >
+             #{perm.permission}
+         </foreach>
+        </if>
+    </where>
+    </delete>
+</mapper>

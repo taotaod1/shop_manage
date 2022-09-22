@@ -1,5 +1,10 @@
 package com.bt.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.bt.pojo.DtsRole;
+import com.bt.vo.CatVo;
+
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -12,4 +17,11 @@ public interface DtsRoleService {
     Set<String> findRoleNameByIds(Integer[] roleIds);
 
 
+    List<CatVo> findeCatVos();
+
+    IPage<DtsRole> findByPage(Integer page, Integer limit, String sort, String order, String rolename);
+
+    Integer updateRole(DtsRole dtsRole);
+
+    Integer createRole(DtsRole dtsRole);
 }

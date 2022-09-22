@@ -4,6 +4,7 @@ import com.alibaba.druid.support.json.JSONUtils;
 import com.alibaba.druid.util.StringUtils;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.bt.annotation.RequiresPermissionsDesc;
 import com.bt.pojo.DtsUser;
 import com.bt.pojo.DtsUserAccount;
 import com.bt.service.DtsUserService;
@@ -11,6 +12,8 @@ import com.bt.type.UserTypeEnum;
 import com.bt.util.JacksonUtil;
 import com.bt.util.ResponseUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
@@ -35,6 +38,8 @@ import java.util.Map;
 public class AdminUserController {
     @Autowired
      private DtsUserService dtsUserServiceImpl;
+    @RequiresPermissionsDesc(menu = {"用户管理", "会员管理"}, button = "查询")
+    @RequiresPermissions("admin:user:list")
     @GetMapping("/list")
     public Object list(Integer page,Integer limit,String sort,String order,String username,String mobile){
 //        检验
@@ -56,6 +61,7 @@ public class AdminUserController {
      * @param
      * @return
      */
+
     @PostMapping  ("/approveAgency")
     public Object approveAgency(@RequestBody String body){
         Integer userId = JacksonUtil.parseInteger(body, "userId");

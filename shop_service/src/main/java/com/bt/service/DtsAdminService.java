@@ -1,5 +1,6 @@
 package com.bt.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.bt.pojo.DtsAdmin;
 import com.bt.pojo.DtsRole;
 import org.springframework.stereotype.Service;
@@ -17,4 +18,11 @@ import java.util.Set;
 public interface DtsAdminService {
     DtsAdmin findDtsAdminByUserName(String username);
 
+    IPage<DtsAdmin> findDtsAdminByPage(Integer page, Integer limit, String sort, String order, String username);
+
+    Integer updateDtsAdmin(DtsAdmin dtsAdmin);
+
+    Integer insertDtsAdmin(DtsAdmin dtsAdmin);
+
+    Integer deleteDtsAdmin(DtsAdmin dtsAdmin);
 }

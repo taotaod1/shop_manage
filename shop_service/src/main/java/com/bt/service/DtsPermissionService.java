@@ -1,5 +1,8 @@
 package com.bt.service;
 
+import com.bt.pojo.DtsPermission;
+
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -10,4 +13,6 @@ import java.util.Set;
  **/
 public interface DtsPermissionService {
     Set<String> findPermissionByIds(Integer[] roleIds);
+
+    Integer saveBatchPerms(List<DtsPermission> permissionss, List<DtsPermission> detDtsPermission, Integer roleId);
 }

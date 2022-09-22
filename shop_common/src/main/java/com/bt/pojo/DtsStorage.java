@@ -47,7 +47,7 @@ public class DtsStorage implements Serializable {
     /**
      * 文件大小
      */
-    private Integer size;
+    private long size;
 
     /**
      * 文件访问链接

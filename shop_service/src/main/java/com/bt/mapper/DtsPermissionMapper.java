@@ -2,6 +2,9 @@ package com.bt.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.bt.pojo.DtsPermission;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,7 @@ import com.bt.pojo.DtsPermission;
  */
 public interface DtsPermissionMapper extends BaseMapper<DtsPermission> {
 
+    Integer insetBatch(@Param("permissionss") List<DtsPermission> permissionss,@Param("roleId") Integer roleId);
+
+    Integer deleteBatchByRoleIdAndPermission(@Param("detDtsPermission") List<DtsPermission> detDtsPermission,@Param("roleId") Integer roleId);
 }

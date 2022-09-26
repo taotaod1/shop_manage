@@ -6,15 +6,14 @@ import com.bt.pojo.DtsGoodsProduct;
 import com.bt.pojo.DtsGoodsSpecification;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class GoodsAllinone {
-
+	private List<Integer> categoryIds;
 	private DtsGoods goods;
-	private DtsGoodsSpecification[] specifications;
-	private DtsGoodsAttribute[] attributes;
+	private List<DtsGoodsSpecification> specifications;
+	private List<DtsGoodsAttribute> attributes;
 	// 这里采用 Product 再转换到 DtsGoodsProduct
-	private DtsGoodsProduct[] products;
-
-
-
+	private List<DtsGoodsProduct> products;
 }

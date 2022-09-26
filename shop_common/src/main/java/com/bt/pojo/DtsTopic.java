@@ -2,6 +2,9 @@ package com.bt.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.bt.util.goodsDeserializer;
+import com.bt.util.goodsValueDeserializer;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -66,7 +69,8 @@ public class DtsTopic implements Serializable {
     /**
      * 专题相关商品序列码，用逗号分隔
      */
-    private String goods;
+
+    private String[] goods;
 
     /**
      * 创建时间

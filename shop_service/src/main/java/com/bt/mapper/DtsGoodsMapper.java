@@ -13,4 +13,5 @@ import com.bt.pojo.DtsGoods;
  */
 public interface DtsGoodsMapper extends BaseMapper<DtsGoods> {
 
+    Integer selectCategoryIdById(Integer id);
 }

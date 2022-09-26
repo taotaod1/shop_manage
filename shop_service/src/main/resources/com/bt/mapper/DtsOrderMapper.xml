@@ -8,4 +8,14 @@
     WHERE do.add_time > DATE_ADD(NOW(),INTERVAL -#{statisDaysRang} DAY)
     GROUP BY DATE_FORMAT(do.add_time,'%Y-%m-%d')
     </select>
+
+<select id="findOrderStmtVos" resultType="com.bt.vo.OrderStmtVo">
+    select DATE_FORMAT(add_time,'%Y-%m-%d') as `day`,
+           count(1) as orders,
+           count(DISTINCT user_id) as customers,
+           SUM(actual_price) as amount,
+           AVG(actual_price)  as pcr
+    from dts_order
+    group by DATE_FORMAT(add_time,'%Y-%m-%d')
+    </select>
 </mapper>

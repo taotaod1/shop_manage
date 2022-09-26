@@ -9,4 +9,15 @@
         INNER JOIN dts_category dc ON dg.category_id = dc.id
     GROUP BY dc.`name`
 </select>
+
+<select id="selectParentIdById" resultType="java.lang.Integer">
+    select pid
+    from dts_category
+    where id=#{categoryid}
+    </select>
+
+<select id="findCatVos" resultType="com.bt.vo.CatVo">
+    select id as value ,`name` as label
+    from dts_category
+    </select>
 </mapper>

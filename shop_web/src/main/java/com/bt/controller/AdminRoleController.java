@@ -65,16 +65,21 @@ public class AdminRoleController {
      * http://localhost:8080/admin/role/permissions?roleId=1
      * get
      */
-    @RequiresPermissions("admin:role:permissions")
+    @RequiresPermissions("admin:role:getpermissions")
     @RequiresPermissionsDesc(menu = {"系统管理", "角色管理"}, button = "查询权限")
     @GetMapping("/permissions")
     public Object permissions(Integer roleId){
+        Set<String> permissionByIds = dtsPermissionServiceImpl.findPermissionByIds(new Integer[]{roleId});
         List<Permission> permissions = PermissionUtil.listPermission(context, "com.bt.controller");
         List<PermVo> permVos = PermissionUtil.listPermVo(permissions);
-        List<String> collect = permissions.stream().map(Permission::getApi).collect(Collectors.toList());
+        if (permissionByIds.contains("*")){
+            permissionByIds=permissions.stream().map(Permission->{
+                return Permission.getRequiresPermissions().value()[0];
+            }).collect(Collectors.toSet());
+        }
         Map map=new HashMap<>();
         map.put("systemPermissions",permVos);
-        map.put("assignedPermissions",collect);
+        map.put("assignedPermissions",permissionByIds);
         return ResponseUtil.ok(map);
     }
     /**
@@ -143,7 +148,7 @@ public class AdminRoleController {
                 dtsPermission.setPermission(permission);
                 return dtsPermission;
             }).collect(Collectors.toList());
-        Integer i = dtsPermissionServiceImpl.saveBatchPerms(addDtsPermissions, detDtsPermission,roleId);
+         Integer i = dtsPermissionServiceImpl.saveBatchPerms(addDtsPermissions, detDtsPermission,roleId);
         if (i > 0) {
             return ResponseUtil.ok();
         } else {

@@ -2,6 +2,9 @@ package com.bt.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.bt.pojo.DtsOrderGoods;
+import com.bt.vo.GoodsStmtVo;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.bt.pojo.DtsOrderGoods;
  */
 public interface DtsOrderGoodsMapper extends BaseMapper<DtsOrderGoods> {
 
+    List<GoodsStmtVo> findStmtVos();
 }

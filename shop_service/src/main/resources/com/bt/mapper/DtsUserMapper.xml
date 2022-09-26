@@ -8,4 +8,11 @@
     WHERE DATE_FORMAT(add_time,'%Y-%m-%d') > DATE_ADD(NOW(),INTERVAL #{statisDaysRang} day)
     GROUP BY DATE_FORMAT(add_time,'%Y-%m-%d')
     </select>
+
+<select id="selectUserDayVo" resultType="com.bt.vo.UserDayVo">
+    select DATE_FORMAT(add_time,'%Y-%m-%d') as `day`,count(1) as users
+    from dts_user
+<!--    where DATE_FORMAT(add_time,'%Y-%m-%d') > DATE_ADD(NOW(),INTERVAL -#{statisDaysRang} day)-->
+    group by DATE_FORMAT(add_time,'%Y-%m-%d')
+    </select>
 </mapper>

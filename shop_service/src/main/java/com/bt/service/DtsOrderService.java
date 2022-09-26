@@ -1,6 +1,10 @@
 package com.bt.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.bt.pojo.DtsOrder;
 import com.bt.vo.DayStatis;
+import com.bt.vo.OrderStmtVo;
+import com.bt.vo.ShipChannelVo;
 
 import java.util.List;
 
@@ -14,4 +18,12 @@ public interface DtsOrderService {
     long findDtsOrderCount();
 
     List<DayStatis> findOrderAmtsVo(int statisDaysRang);
+
+    IPage<DtsOrder> findDtsOrderByPage(Integer page, Integer limit, Integer[] orderStatusArray, String sort, String order, Integer userId, String orderSn);
+
+    List<ShipChannelVo> findShipChannelVos();
+
+    DtsOrder findDtsOrderById(Integer oid);
+
+    List<OrderStmtVo> findOrderStmtVos();
 }

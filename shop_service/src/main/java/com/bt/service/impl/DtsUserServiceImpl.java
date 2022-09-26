@@ -11,6 +11,7 @@ import com.bt.pojo.DtsUser;
 import com.bt.pojo.DtsUserAccount;
 import com.bt.service.DtsUserService;
 import com.bt.vo.DayStatis;
+import com.bt.vo.UserDayVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
@@ -75,5 +76,11 @@ public class DtsUserServiceImpl extends ServiceImpl<BaseMapper<DtsUser>, DtsUser
     public List<DayStatis> findUserOrderCntVo(int statisDaysRang) {
 
         return dtsUserMapper.selectByDayStatis(statisDaysRang);
+    }
+
+    @Override
+    public List<UserDayVo> findUserDayVos() {
+        List<UserDayVo> dayVoList=  dtsUserMapper.selectUserDayVo();
+        return dayVoList;
     }
 }

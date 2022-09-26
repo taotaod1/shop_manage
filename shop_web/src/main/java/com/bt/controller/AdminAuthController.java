@@ -7,6 +7,8 @@ import com.bt.service.DtsPermissionService;
 import com.bt.service.DtsRoleService;
 import com.bt.shiro.AdminAuthorizingRealm;
 import com.bt.util.*;
+import com.bt.util.Base64;
+import com.bt.util.UUID;
 import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
@@ -15,12 +17,12 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * 后端管理--认证管理
@@ -40,6 +42,8 @@ public class AdminAuthController {
     private DtsRoleService dtsRoleServiceImpl;
     @Autowired
     private DtsPermissionService dtsPermissionServiceImpl;
+    @Autowired
+    private ApplicationContext context;
 
 //    获取验证码
     @GetMapping("/captchaImage")
@@ -142,13 +146,26 @@ public class AdminAuthController {
         Integer[] roleIds = admin.getRoleIds();
         Set<String> rolenames=dtsRoleServiceImpl.findRoleNameByIds(roleIds);
         Set<String> permission = dtsPermissionServiceImpl.findPermissionByIds(roleIds);
+        List<String> permissions=toApi(permission);
         Map data=new HashMap<>();
-        data.put("roles",new String[]{"超级管理员"});
+        data.put("roles",rolenames);
         data.put("name",admin.getUsername());
-        data.put("perms",new String[]{"*"});
+        data.put("perms",permissions);
         data.put("avatar",admin.getAvatar());
         return AdminResponseUtil.ok(data);
     }
+
+    private List<String> toApi(Set<String> permission) {
+        if (permission.contains("*")){
+            return Arrays.asList("*");
+        }
+        List<Permission> permissions = PermissionUtil.listPermission(context, "com.bt.controller");
+        List<Permission> permissionList = permissions.stream().filter(p -> permission.contains(p.getRequiresPermissions().value()[0])).collect(Collectors.toList());
+        Set<String> stringSet = PermissionUtil.listPermissionString(permissionList);
+        return new ArrayList<>(stringSet);
+
+    }
+
     @PostMapping("/logout")
     public Object logout(){
         Subject subject = SecurityUtils.getSubject();

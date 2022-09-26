@@ -2,6 +2,9 @@ package com.bt.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.bt.pojo.DtsGoodsProduct;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,5 +16,6 @@ import com.bt.pojo.DtsGoodsProduct;
  */
 public interface DtsGoodsProductMapper extends BaseMapper<DtsGoodsProduct> {
 
-   
+
+    void insertBatch(@Param("products") List<DtsGoodsProduct> products);
 }

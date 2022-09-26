@@ -1,8 +1,13 @@
 package com.bt.pojo;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.bt.util.goodsValueDeserializer;
+import com.fasterxml.jackson.annotation.JacksonAnnotation;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -86,7 +91,8 @@ public class DtsCoupon implements Serializable {
     /**
      * 商品限制值，goods_type如果是0则空集合，如果是1则是类目集合，如果是2则是商品集合。
      */
-    private String goodsValue;
+//    @JsonDeserialize(using = goodsValueDeserializer.class)
+    private String[]  goodsValue;
 
     /**
      * 优惠券兑换码
@@ -106,11 +112,13 @@ public class DtsCoupon implements Serializable {
     /**
      * 使用券开始时间
      */
+     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date startTime;
 
     /**
      * 使用券截至时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date endTime;
 
     /**

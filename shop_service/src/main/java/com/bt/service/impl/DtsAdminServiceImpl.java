@@ -6,14 +6,13 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.bt.mapper.DtsAdminMapper;
 import com.bt.mapper.DtsPermissionMapper;
 import com.bt.mapper.DtsRoleMapper;
 import com.bt.pojo.DtsAdmin;
-import com.bt.pojo.DtsPermission;
-import com.bt.pojo.DtsRole;
 import com.bt.service.DtsAdminService;
-import com.bt.util.bcrypt.BCrypt;
 import com.bt.util.bcrypt.BCryptPasswordEncoder;
+import com.bt.vo.AdminVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +26,8 @@ import java.util.*;
  **/
 @Service
 public class DtsAdminServiceImpl extends ServiceImpl<BaseMapper<DtsAdmin>,DtsAdmin> implements DtsAdminService {
-
+    @Autowired
+    private DtsAdminMapper dtsAdminMapper;
     @Autowired
     private DtsRoleMapper dtsRoleMapper;
     @Autowired
@@ -66,6 +66,11 @@ public class DtsAdminServiceImpl extends ServiceImpl<BaseMapper<DtsAdmin>,DtsAdm
     @Override
     public Integer deleteDtsAdmin(DtsAdmin dtsAdmin) {
         return getBaseMapper().deleteById(dtsAdmin);
+    }
+
+    @Override
+    public List<AdminVo> findDtsAdminVo() {
+        return dtsAdminMapper.selectAdminVo();
     }
 
 }

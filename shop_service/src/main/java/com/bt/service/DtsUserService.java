@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.bt.pojo.DtsUser;
 import com.bt.pojo.DtsUserAccount;
 import com.bt.vo.DayStatis;
+import com.bt.vo.UserDayVo;
 
 import java.util.List;
 
@@ -27,4 +28,6 @@ public interface DtsUserService {
     long findDtsUserCount();
 
     List<DayStatis> findUserOrderCntVo(int statisDaysRang);
+
+    List<UserDayVo> findUserDayVos();
 }

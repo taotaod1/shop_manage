@@ -1,6 +1,10 @@
 package com.bt.service.impl;
 
+import com.alibaba.druid.util.StringUtils;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bt.pojo.DtsStorage;
 import com.bt.service.DtsStorageService;
@@ -46,5 +50,27 @@ public class DtsStorageServiceImpl extends ServiceImpl<BaseMapper<DtsStorage>,Dt
 //        返回
         return dtsStorage;
 
+    }
+
+    @Override
+    public IPage<DtsStorage> findDtsStorageByPage(Integer page, Integer limit, String sort, String order, String key, String name) {
+        if (page==null||page<1){
+            page=1;
+        }
+        if (limit==null||limit<1){
+            limit=10;
+        }
+        return getBaseMapper().selectPage(new Page<>(page,limit),new QueryWrapper<DtsStorage>().eq(!StringUtils.isEmpty(key),"`key`",key).like(!StringUtils.isEmpty(name), "name",name).orderBy(!StringUtils.isEmpty(sort), "asc".equals(order),sort));
+    }
+
+    @Override
+    public void updateDtsStorage(DtsStorage dtsStorage) {
+        getBaseMapper().updateById(dtsStorage);
+    }
+
+    @Override
+    public void deleteDtsStorage(DtsStorage dtsStorage) {
+        TenctentOSSUtils.deleteImage(secretId, secretKey, bucketName, dtsStorage.getKey());
+        getBaseMapper().deleteById(dtsStorage.getId());
     }
 }

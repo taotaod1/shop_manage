@@ -11,7 +11,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/*
+/**
+ * @author 86155
+ */ /*
    <columnOverride column="ids" javaType="java.lang.Integer[]" typeHandler="JsonIntegerArrayTypeHandler"/>
  */
 //指定java中的数据类型

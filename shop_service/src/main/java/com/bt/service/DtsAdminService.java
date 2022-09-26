@@ -2,11 +2,10 @@ package com.bt.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.bt.pojo.DtsAdmin;
-import com.bt.pojo.DtsRole;
+import com.bt.vo.AdminVo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author wbt
@@ -25,4 +24,6 @@ public interface DtsAdminService {
     Integer insertDtsAdmin(DtsAdmin dtsAdmin);
 
     Integer deleteDtsAdmin(DtsAdmin dtsAdmin);
+
+    List<AdminVo> findDtsAdminVo();
 }

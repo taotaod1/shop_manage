@@ -9,22 +9,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfeb94a7-f241-4183-8acb-f2a4c8105df7" name="变更" comment="删除target目录">
+    <list default="true" id="dfeb94a7-f241-4183-8acb-f2a4c8105df7" name="变更" comment="管理员 角色 增删改查">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/pojo/DtsStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/pojo/DtsStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsPermissionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsPermissionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/handler/JsonIntegerArrayTypeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/handler/JsonIntegerArrayTypeHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/pojo/DtsCollect.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/pojo/DtsCollect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/pojo/DtsCoupon.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/pojo/DtsCoupon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/pojo/DtsFootprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/pojo/DtsFootprint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/pojo/DtsGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/pojo/DtsGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/pojo/DtsGrouponRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/pojo/DtsGrouponRules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/pojo/DtsTopic.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/pojo/DtsTopic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/vo/CatVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/vo/CatVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/vo/DtsBrandVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/vo/DtsBrandVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/vo/GoodsAllinone.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_common/src/main/java/com/bt/vo/GoodsAllinone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsAdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsAdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsCategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsCategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsGoodsAttributeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsGoodsAttributeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsGoodsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsGoodsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsGoodsProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsGoodsProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsGoodsSpecificationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsGoodsSpecificationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsOrderGoodsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsOrderGoodsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsOrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsOrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/mapper/DtsUserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsAdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsPermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsPermissionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsCategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsGoodsProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsGoodsProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsGoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsGoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsStorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/DtsUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsAdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsAdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsPermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsPermissionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsRoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/util/AliyunOSSUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/util/AliyunOSSUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop_web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_web/src/main/java/com/bt/controller/AdminUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_web/src/main/java/com/bt/controller/AdminUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_web/src/main/resources/dbinfo.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shop_web/src/main/resources/dbinfo.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsCategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsCategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsGoodsProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsGoodsProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsGoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsGoodsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsOrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsStorageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsStorageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/service/impl/DtsUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/util/TenctentOSSUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/java/com/bt/util/TenctentOSSUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/resources/com/bt/mapper/DtsCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/resources/com/bt/mapper/DtsCategoryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/resources/com/bt/mapper/DtsOrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/resources/com/bt/mapper/DtsOrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_service/src/main/resources/com/bt/mapper/DtsUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop_service/src/main/resources/com/bt/mapper/DtsUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_web/src/main/java/com/bt/controller/AdminAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_web/src/main/java/com/bt/controller/AdminAuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_web/src/main/java/com/bt/controller/AdminRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_web/src/main/java/com/bt/controller/AdminRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_web/src/main/java/com/bt/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop_web/src/main/java/com/bt/controller/StorageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +64,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
+        <option value="Mapper" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Mapper" />
       </list>
     </option>
   </component>
@@ -94,6 +120,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24022989" />
@@ -105,8 +132,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.bt.service.impl" />
       <recent name="com.bt.service" />
+      <recent name="com.bt.util" />
+      <recent name="com.bt.service.impl" />
       <recent name="com.bt.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -274,9 +302,9 @@
       <list>
         <item itemvalue="JUnit.testtencent.test" />
         <item itemvalue="JUnit.testqcloud.test" />
-        <item itemvalue="应用程序.testqcloud" />
         <item itemvalue="HTTP 请求.generated-requests | #9" />
         <item itemvalue="HTTP 请求.generated-requests | #7" />
+        <item itemvalue="应用程序.testqcloud" />
       </list>
     </recent_temporary>
   </component>
@@ -295,7 +323,24 @@
       <workItem from="1663765456095" duration="6242000" />
       <workItem from="1663804631595" duration="8728000" />
       <workItem from="1663826845677" duration="9453000" />
-      <workItem from="1663844835118" duration="13170000" />
+      <workItem from="1663844835118" duration="13677000" />
+      <workItem from="1663892378763" duration="6958000" />
+      <workItem from="1663913840346" duration="92000" />
+      <workItem from="1663913960430" duration="1879000" />
+      <workItem from="1663915922452" duration="4474000" />
+      <workItem from="1663920471843" duration="7122000" />
+      <workItem from="1663937518058" duration="5727000" />
+      <workItem from="1663981367372" duration="458000" />
+      <workItem from="1663981878493" duration="8485000" />
+      <workItem from="1663990509976" duration="855000" />
+      <workItem from="1664002369884" duration="5067000" />
+      <workItem from="1664017018402" duration="4509000" />
+      <workItem from="1664021796198" duration="600000" />
+      <workItem from="1664022465927" duration="4282000" />
+      <workItem from="1664151294587" duration="15290000" />
+      <workItem from="1664174060919" duration="10960000" />
+      <workItem from="1664185166602" duration="1520000" />
+      <workItem from="1664188794704" duration="1097000" />
     </task>
     <task id="LOCAL-00001" summary="提交忽略文件">
       <created>1663642740716</created>
@@ -325,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663804742468</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="管理员 角色 增删改查">
+      <created>1663858674404</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663858674404</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,13 +398,24 @@
     <MESSAGE value="第一次提交 搭建环境&amp;获取验证码" />
     <MESSAGE value="提交忽略文件" />
     <MESSAGE value="删除target目录" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除target目录" />
+    <MESSAGE value="管理员 角色 增删改查" />
+    <option name="LAST_COMMIT_MESSAGE" value="管理员 角色 增删改查" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.springframework.aop.framework.JdkDynamicAopProxy" memberName="advised" />
+        <PinnedItemInfo parentTag="java.lang.String" memberName="value" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="goodsAllinone.goods" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

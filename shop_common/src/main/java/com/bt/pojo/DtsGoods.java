@@ -4,6 +4,10 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.bt.handler.JsonStringArrayTypeHandler;
+import com.fasterxml.jackson.annotation.JacksonAnnotation;
+import com.fasterxml.jackson.annotation.JsonFilter;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -73,6 +77,7 @@ public class DtsGoods implements Serializable {
     /**
      * 商品页面商品图片
      */
+    @JsonDeserialize(using = com.bt.util.JsonStringArrayDeserializer.class)
     private String picUrl;
 
     /**
